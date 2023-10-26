@@ -1,6 +1,7 @@
 package Student;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
@@ -76,6 +77,20 @@ public class Registration {
 			}
 		}
 		System.out.println(" student id "+ searchQuery +" not found");
+	}
+
+	//sorting based on name or id.
+	public void sortingStudent(String byNameOrId) {
+		if("name".equalsIgnoreCase(byNameOrId)) {
+			Collections.sort(students, Student.NAME_COMPARATOR);
+		}else if("id".equalsIgnoreCase(byNameOrId)) {
+			Collections.sort(students, Student.ID_COMPARATOR);
+		}else {
+			System.out.println("Invalid sorting query please search by name or id");
+			return;
+		}
+		System.out.println("sorting order by "+byNameOrId);
+		viewAllStudents();
 	}
 
 
