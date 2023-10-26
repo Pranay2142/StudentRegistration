@@ -1,4 +1,4 @@
-# StudentRegistration
+# StudentRegistration(Console-based)
 GitHub Repository Description: 
 
 This repository contains a simple Java program for managing student registration. The code is organized into three classes: Registration, Student, and Main.
