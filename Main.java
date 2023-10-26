@@ -38,6 +38,10 @@ public class Main {
 //		r.viewAllStudents();
 		
 		r.searchDetails("13");
+
+		r.sortingStudent("name");
+		
+		r.sortingStudent("id");
 		
 		
 	}
