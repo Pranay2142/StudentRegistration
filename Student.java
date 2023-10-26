@@ -1,5 +1,8 @@
 package Student;
 
+import java.util.Comparator;
+
+
 public class Student {
 	//attributes
 	private int studentId;
@@ -13,6 +16,13 @@ public class Student {
 		this.name = name;
 		this.course = course;
 	}
+
+	//Implement custom sorting order by name
+	public static final Comparator<Student> NAME_COMPARATOR = Comparator.comparing(Student::getName);
+	
+	//Implementing custom sorting order by id
+	public static final Comparator<Student> ID_COMPARATOR = Comparator.comparingInt(Student::getStudentId); 
+	
 	
 	//getter and setter
 	public int getStudentId() {
